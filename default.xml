@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FreeBSD-X manifest — multi-repo layout for the Android "repo" tool.
+    repo init -u https://github.com/freebsd-x/manifest.git -m default.xml
+    repo sync
+  All projects live under the github.com/freebsd-x org; revision defaults to main.
+-->
+<manifest>
+  <remote name="origin" fetch="https://github.com/freebsd-x" />
+  <default revision="main" remote="origin" sync-j="4" />
+
+  <!-- ── Platform ─────────────────────────────────────────────────────── -->
+  <project name="protocol"       path="include"             />
+  <project name="xserver"        path="core/xserver"        />
+  <project name="wayland-bridge" path="core/wayland-bridge" />
+  <project name="xkit"           path="sdk/xkit"            />
+  <project name="xrender"        path="sdk/xrender"         />
+  <project name="xshell"         path="core/xshell"         />
+  <project name="xlogin"         path="core/xlogin"         />
+  <project name="lockscreen"     path="core/lockscreen"     />
+  <project name="screensaver"    path="core/screensaver"    />
+
+  <!-- ── Services ─────────────────────────────────────────────────────── -->
+  <project name="xaudio" path="core/services/xaudio" />
+  <project name="xconfig" path="core/services/xconfig" />
+  <project name="xnetwork" path="core/services/xnetwork" />
+  <project name="xnotify" path="core/services/xnotify" />
+  <project name="xportal" path="core/services/xportal" />
+  <project name="xstorage" path="core/services/xstorage" />
+  <project name="xsystem" path="core/services/xsystem" />
+  <project name="xupdate" path="core/services/xupdate" />
+
+  <!-- ── Apps ──────────────────────────────────────────────────────────── -->
+  <project name="AppManager" path="apps/AppManager.xapp" />
+  <project name="Archive" path="apps/Archive.xapp" />
+  <project name="Browser" path="apps/Browser.xapp" />
+  <project name="Calculator" path="apps/Calculator.xapp" />
+  <project name="Calendar" path="apps/Calendar.xapp" />
+  <project name="Camera" path="apps/Camera.xapp" />
+  <project name="ColorPicker" path="apps/ColorPicker.xapp" />
+  <project name="Contacts" path="apps/Contacts.xapp" />
+  <project name="DemoApp" path="apps/DemoApp.xapp" />
+  <project name="DiskManager" path="apps/DiskManager.xapp" />
+  <project name="Files" path="apps/Files.xapp" />
+  <project name="FontManager" path="apps/FontManager.xapp" />
+  <project name="GpuDemo" path="apps/GpuDemo.xapp" />
+  <project name="ImageViewer" path="apps/ImageViewer.xapp" />
+  <project name="Installer" path="apps/Installer.xapp" />
+  <project name="Mail" path="apps/Mail.xapp" />
+  <project name="Maps" path="apps/Maps.xapp" />
+  <project name="MusicPlayer" path="apps/MusicPlayer.xapp" />
+  <project name="Notes" path="apps/Notes.xapp" />
+  <project name="PDFViewer" path="apps/PDFViewer.xapp" />
+  <project name="Settings" path="apps/Settings.xapp" />
+  <project name="TaskManager" path="apps/TaskManager.xapp" />
+  <project name="Terminal" path="apps/Terminal.xapp" />
+  <project name="TextEditor" path="apps/TextEditor.xapp" />
+  <project name="VideoPlayer" path="apps/VideoPlayer.xapp" />
+  <project name="Weather" path="apps/Weather.xapp" />
+
+  <!-- ── Tooling + build root ─────────────────────────────────────────── -->
+  <project name="tools"   path="tools"   />
+  <project name="scripts" path="scripts" />
+  <project name="build"   path="build">
+    <linkfile src="meson.build"   dest="meson.build"   />
+    <linkfile src="meson.options" dest="meson.options" />
+  </project>
+  <project name="manifest" path="manifest">
+    <linkfile src=".github/workflows/ci.yml"      dest=".github/workflows/ci.yml" />
+    <linkfile src=".github/workflows/release.yml" dest=".github/workflows/release.yml" />
+  </project>
+</manifest>
