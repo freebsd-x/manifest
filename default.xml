@@ -21,14 +21,6 @@
   <project name="screensaver"    path="core/screensaver"    />
 
   <!-- ── Services ─────────────────────────────────────────────────────── -->
-  <project name="xaudio" path="core/services/xaudio" />
-  <project name="xconfig" path="core/services/xconfig" />
-  <project name="xnetwork" path="core/services/xnetwork" />
-  <project name="xnotify" path="core/services/xnotify" />
-  <project name="xportal" path="core/services/xportal" />
-  <project name="xstorage" path="core/services/xstorage" />
-  <project name="xsystem" path="core/services/xsystem" />
-  <project name="xupdate" path="core/services/xupdate" />
 
   <!-- ── Apps ──────────────────────────────────────────────────────────── -->
   <project name="AppManager" path="apps/AppManager.xapp" />
