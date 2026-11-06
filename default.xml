@@ -15,6 +15,7 @@
   <project name="wayland-bridge" path="core/wayland-bridge" />
   <project name="xkit"           path="sdk/xkit"            />
   <project name="xrender"        path="sdk/xrender"         />
+  <project name="xweb"           path="sdk/xweb"            />
   <project name="xshell"         path="core/xshell"         />
   <project name="xlogin"         path="core/xlogin"         />
   <project name="lockscreen"     path="core/lockscreen"     />
