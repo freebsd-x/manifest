@@ -19,7 +19,6 @@
   <project name="xshell"         path="core/xshell"         />
   <project name="xlogin"         path="core/xlogin"         />
   <project name="lockscreen"     path="core/lockscreen"     />
-  <project name="screensaver"    path="core/screensaver"    />
 
   <!-- ── Services ─────────────────────────────────────────────────────── -->
 
